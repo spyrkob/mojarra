@@ -63,7 +63,7 @@
 
     <property file="${user.home}/build.properties"/>
     <property file="../build.properties"/>
-    <import file="${jsf.build.home}/common/ant/common.xml"/>    
+    <import file="../common/ant/common.xml"/>    
 
     <!-- Default value for debugging arguments is no.  Override in
          build.properties -->
@@ -108,6 +108,7 @@
                  classname="org.apache.cactus.integration.ant.RunServerTestsTask">
             <classpath>
                 <path refid="test.runtime.classpath"/>
+                <!--pathelement path="${compile.path}"/-->
             </classpath>
         </taskdef>
 

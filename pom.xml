@@ -194,6 +194,19 @@
         <scope>provided</scope>
         <optional>true</optional>
       </dependency>
+
+      <dependency>
+        <groupId>cactus</groupId>
+        <artifactId>cactus</artifactId>
+        <version>13-1.7.2</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>cactus</groupId>
+        <artifactId>cactus-ant</artifactId>
+        <version>13-1.7.2</version>
+        <scope>test</scope>
+      </dependency>
   </dependencies>
 
   <repositories>
@@ -339,6 +352,7 @@
                 <delete dir="${project.basedir}/jar-sources" />
                 <copy file="${project.basedir}/build.properties.glassfish" tofile="${project.basedir}/build.properties" preservelastmodified="true" overwrite="true" />
                 <property name="compile.classpath" refid="maven.compile.classpath" />
+                <property name="test.classpath" refid="maven.test.classpath" />
                 <taskdef resource="net/sf/antcontrib/antlib.xml">
                   <classpath>
                     <pathelement location="${project.basedir}/common/lib/ant-contrib.jar" />
@@ -353,14 +367,22 @@
                   <entry key="build.number" value="" />
                   <entry key="build.type" value="${build.jbossorg}" />
                   <entry key="compile.path" value="${compile.classpath}" />
+                  <entry key="test.path" value="${test.classpath}" />
                   <entry key="logging.version" value="${logging.version}" />
                 </propertyfile>
+                <ant antfile="${project.basedir}/build.xml" target="test" inheritRefs="true" />
                 <ant antfile="${project.basedir}/build.xml" target="dist" inheritRefs="true" />
               </target>
             </configuration>
             <goals>
               <goal>run</goal>
             </goals>
+          </execution>
+          <execution>
+            <id>test</id>
+            <phase>test</phase>
+            <configuration>
+            </configuration>
           </execution>
         </executions>
         <dependencies>

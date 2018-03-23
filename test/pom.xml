@@ -193,7 +193,9 @@
                 </plugins>
             </build>
             <properties>
-                <glassfish.cargo.home>C:/Glassfish4.0</glassfish.cargo.home>
+        <glassfish.cargo.home>/glassfish4</glassfish.cargo.home>
+        <glassfish.patch.home>/glassfish4</glassfish.patch.home>
+                <!--glassfish.cargo.home>C:/Glassfish4.0</glassfish.cargo.home-->
                 <glassfish.cargo.configType>standalone</glassfish.cargo.configType>
                 <glassfish.cargo.config>${glassfish.cargo.home}/glassfish/domains</glassfish.cargo.config>
                 <glassfish.cargo.domain>domain1</glassfish.cargo.domain>
