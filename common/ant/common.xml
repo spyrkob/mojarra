@@ -232,14 +232,15 @@
     </path>
 
     <path id="htmlunit.compile.classpath">
-        <pathelement path="${compile.path}"/>
-        <fileset dir="${htmlunit.home}/lib" includes="htmlunit*.jar,
-                                                      commons-httpclient*.jar"/>
+        <pathelement path="${test.path}"/>
+        <!--fileset dir="${htmlunit.home}/lib" includes="htmlunit*.jar,
+                                                      commons-httpclient*.jar"/-->
     </path>
 
     <path id="htmlunit.runtime.classpath">
-        <path refid="junit.classpath"/>
-        <fileset dir="${htmlunit.home}/lib" includes="*.jar"/>
+        <pathelement path="${test.path}"/>
+        <!--path refid="junit.classpath"/>
+        <fileset dir="${htmlunit.home}/lib" includes="*.jar"/-->
     </path>
 
     <!-- Make sure to compile/run with the special cactus jar 

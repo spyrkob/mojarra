@@ -79,7 +79,7 @@ container.name=glassfish
 #    Override the default value if testing against
 #    a different version is desirable.
 # --------------------------------------------------
-container.home=
+container.home=/mojarra/glassfish4
 container.host=localhost
 container.port=8080
 
