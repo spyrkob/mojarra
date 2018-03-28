@@ -53,7 +53,7 @@
       <dependency>
         <groupId>ant-contrib</groupId>
         <artifactId>ant-contrib</artifactId>
-        <version>1.0b3</version>
+        <version>1.0b2</version>
         <exclusions>
           <exclusion>
            <groupId>ant</groupId>
@@ -212,6 +212,24 @@
         <artifactId>htmlunit</artifactId>
         <version>2.4</version>
         <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>3.8.1</version>
+        <scope>test</scope>
+      </dependency>
+      <!--dependency>
+        <groupId>ant</groupId>
+        <artifactId>ant-junit</artifactId>
+        <version>1.6.5</version>
+        <scope>test</scope>
+      </dependency-->
+      <dependency>
+        <groupId>commons-collections</groupId>
+        <artifactId>commons-collections</artifactId>
+        <version>3.0</version>
+        <scope>provided</scope>
       </dependency>
   </dependencies>
 
@@ -398,6 +416,11 @@
             <version>1.7.0</version>
             <scope>system</scope>
             <systemPath>${java.home}/../lib/tools.jar</systemPath>
+          </dependency>
+          <dependency>
+            <groupId>ant</groupId>
+            <artifactId>ant-junit</artifactId>
+            <version>1.6.5</version>
           </dependency>
         </dependencies>
       </plugin>

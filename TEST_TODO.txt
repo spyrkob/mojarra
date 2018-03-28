@@ -1,0 +1,3 @@
+auto-start glassfish
+sort out xs3p dependency
+check if the changes are actually getting tested

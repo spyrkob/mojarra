@@ -104,7 +104,7 @@
     </ant>
     <mkdir dir="${regression.test.results.dir}" />
 
-    <container.start/>
+    <!--container.start/-->
 
     <for list="${applications}" param="app" trim="true">
       <sequential>
@@ -126,7 +126,7 @@
       </sequential>
     </for>
 
-    <container.stop/>
+    <!--container.stop/-->
 
     </target>    
 
