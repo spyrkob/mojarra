@@ -12,5 +12,4 @@ jobs:
           java-version: 1.8
 #      - name: Build project
 #        run: mvn clean install
-      - run: cd test
-      - run: echo `pwd`
+      - run: cd test && echo `pwd`
